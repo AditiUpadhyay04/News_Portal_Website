@@ -30,7 +30,7 @@ function Home() {
       } else {
         data = await getCategoryNews(category);
       }
-      console.log(data);
+      // console.log(data);
       setNewsData(data);
     } catch (error) {
       console.log(error);
@@ -41,8 +41,8 @@ function Home() {
   };
 
   const handleSearch = async () => {
-    if (search.trim().length === 0) {
-      toast.error("Please enter something to search");
+    if (!search.trim()) {
+      toast.error("Please Enter something to search");
       return;
     }
     try {
@@ -64,7 +64,7 @@ function Home() {
       <div className="bg-linear-to-r from-red-800 to-red-600 text-white rounded-xl p-10">
         <h1 className="text-5xl font-bold">Stay Updated With Latest News</h1>
         <p className="mt-5 text-lg">
-          Read the latest news from all around the world.
+          Read the latest news from around the world.
         </p>
         <button className="mt-6 bg-white text-red-600 text-lg px-6 py-3 rounded-lg font-semibold">
           Explore News
@@ -82,12 +82,12 @@ function Home() {
       )}
 
       <div className="flex justify-between items-center my-8">
-        <h2 className="text-3x; font-bold capitalize">
+        <h2 className="text-3xl font-bold capitalize">
           {isSearching
-            ? `Showing Results for "${search}"`
+            ? `Search Result for "${search}"`
             : category === "general"
               ? "Top Headlines"
-              : `${category}News`}
+              : `${category} News`}
         </h2>
 
         {/* Clear Search */}
@@ -99,7 +99,7 @@ function Home() {
               setCategory("general");
               fetchNews();
             }}
-            className="bg-gray-600 text-white rounded-lg px-5 py-2 text-lg font-medium hover:bg-gray-700"
+            className="bg-gray-900 text-white rounded-lg px-5 py-2 text-lg font-medium hover:bg-gray-700"
           >
             Clear Search
           </button>

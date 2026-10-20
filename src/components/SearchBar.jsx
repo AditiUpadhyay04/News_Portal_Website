@@ -6,7 +6,7 @@ function SearchBar({ search, setSearch, handleSearch }) {
       <div className="flex items-center bg-white border border-gray-300 rounded-3xl overflow-hidden shadow-sm">
         <input
           type="text"
-          placeholder="Search Latest News..."
+          placeholder="Search latest news..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           onKeyDown={(e) => {
@@ -26,4 +26,5 @@ function SearchBar({ search, setSearch, handleSearch }) {
     </div>
   );
 }
+
 export default SearchBar;

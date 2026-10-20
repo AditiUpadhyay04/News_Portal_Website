@@ -3,37 +3,37 @@ import { FaNewspaper } from "react-icons/fa";
 
 function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md">
-      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-4">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <FaNewspaper className="text-2xl text-red-600 sm:text-3xl" />
-          <h1 className="text-xl font-bold text-gray-800 sm:text-2xl">
-            NewsHub
-          </h1>
-        </Link>
-
-        {/* Navigation */}
-        <div className="flex items-center gap-5 text-sm font-medium text-gray-700 sm:gap-8 sm:text-lg">
+    <nav className="bg-white shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="flex items-center gap-2">
+          <FaNewspaper className="text-3xl text-red-600" />
+          <h1 className="text-2xl font-bold text-gray-800">NewsHub</h1>
+        </div>
+        <div className="flex gap-8 font-medium text-lg text-gray-700">
           <Link
             to="/"
-            className="transition-all duration-300 hover:text-red-600"
+            className="hover:text-red-600 transition-all duration-300"
           >
             Home
           </Link>
 
           <Link
             to="/about"
-            className="transition-all duration-300 hover:text-red-600"
+            className="hover:text-red-600 transition-all duration-300"
           >
             About
           </Link>
-
           <Link
             to="/contact"
-            className="transition-all duration-300 hover:text-red-600"
+            className="hover:text-red-600 transition-all duration-300"
           >
             Contact
+          </Link>
+          <Link
+            to="/bookmarks"
+            className="hover:text-red-600 transition-all duration-300"
+          >
+            Bookmarks
           </Link>
         </div>
       </div>

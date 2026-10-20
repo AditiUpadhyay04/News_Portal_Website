@@ -12,7 +12,7 @@ export const getTopHeadlines = async () => {
     return res.data.articles;
   } catch (error) {
     console.log(error, "Error in Fetching Top Headlines");
-    return []; 
+    return [];
   }
 };
 
@@ -30,7 +30,7 @@ export const getCategoryNews = async (category) => {
   }
 };
 
-//Search News
+// Search News
 export const searchNews = async (query) => {
   try {
     const res = await Axios.get(
